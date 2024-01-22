@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+# Desafio Técnico!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O candidato devera projetar um Front-End na tecnologia React, utilizando ferramentas e bibliotecas a sua escolha, onde ele deverá consumir uma Api (exemplo moviedb ou pokeapi), e realizar os seguintes requisitos:
 
-Currently, two official plugins are available:
+- Montar uma tela com a listagem de pokemons ou filmes
+- Adicionar filtro por nome
+- A listagem deve ser paginada, X itens por tela (Quantidade a sua escolha, sugestão 10 a 15 itens)
+- A tela deve ser responsiva, mobile-first
+- Construir uma tela de detalhes, onde contenha as informações dos itens selecionado na listagem.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Referencias de api:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- https://developer.themoviedb.org/reference/intro/getting-started
+- https://pokeapi.co/
