@@ -23,6 +23,6 @@ export type CardDetailsType = {
   legalities: {
     format: string;
     legality: "Legal" | "Banned" | "Restricted";
-  };
+  }[];
   id: string;
 };

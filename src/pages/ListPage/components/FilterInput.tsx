@@ -1,15 +1,13 @@
 import { Input } from "antd";
 import React from "react";
+import { useListPage } from "../hooks/useListPage";
 
-type Props = {
-  onSubmitSearch: (name: string) => void;
-};
-
-export const FilterInput: React.FC<Props> = ({ onSubmitSearch }: Props) => {
+export const FilterInput: React.FC = () => {
+  const { setSearchString } = useListPage();
   return (
     <Input.Search
       placeholder="Digite aqui sua pesquisa"
-      onSearch={onSubmitSearch}
+      onSearch={setSearchString}
     />
   );
 };

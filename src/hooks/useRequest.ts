@@ -11,6 +11,8 @@ export function useRequest<Params, Response>(
 
   async function execute(params: Params) {
     try {
+      setLoading(true);
+      setError(undefined);
       const response = await request(params);
       setData(response);
     } catch (error) {

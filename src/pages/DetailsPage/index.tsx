@@ -1,32 +1,22 @@
-import { ArrowLeftOutlined } from "@ant-design/icons";
-import { Button, Layout } from "antd";
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useRequest } from "../../hooks/useRequest";
-import { getDetailsRequest } from "./getDetailsRequest";
+import { Layout } from "antd";
+import React from "react";
+import { DetailsContent } from "./components/DetailsContent";
+import { DetailsHeader } from "./components/DetailsHeader";
+import { DetailsContextProvider } from "./context/DetailsContext";
 
 const { Header, Content } = Layout;
 
 export const DetailsPage: React.FC = () => {
-  const { data, loading, execute, error } = useRequest(getDetailsRequest);
-
-  const { id } = useParams<{ id: string }>();
-
-  useEffect(() => {
-    if (id) execute(id);
-  }, [id]);
-
   return (
-    <Layout>
-      <Header>
-        <Button
-          type="text"
-          icon={
-            <ArrowLeftOutlined style={{ color: "#FFF", fontSize: "32px" }} />
-          }
-        />
-      </Header>
-      <Content></Content>
-    </Layout>
+    <DetailsContextProvider>
+      <Layout>
+        <Header style={{ padding: 0 }}>
+          <DetailsHeader />
+        </Header>
+        <Content style={{ height: "calc(100vh - 64px)" }}>
+          <DetailsContent />
+        </Content>
+      </Layout>
+    </DetailsContextProvider>
   );
 };
